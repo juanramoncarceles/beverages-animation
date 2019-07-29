@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  height: 7rem;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.wine-title {
+  font-family: 'Dancing Script', cursive;
+}
+
+.vermouth-title {
+  font-family: 'Pacifico', cursive;
+  line-height: 6rem;
+}
+
+.beer-title {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+}
+
+button {
+  padding: 0;
+  border-style: none;
+  background-color: #000;
+  height: 3rem;
+  align-self: center;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+button > svg > path {
+  stroke:#fff;
+  fill:#fff;
+  stroke-width: 0px;
+}
+
+button:hover > svg > path,
+button:active > svg > path
+{
+  stroke-width: 10px;
+}
+
+button > svg {
+  height: 100%;
+}
+
+
+
+svg#drinks {
+  background: #000;
+  margin: auto;
+  padding-left: 1rem;
+}
+
+@media (max-width: 500px) {
+  button {
+    height: 2rem;
+  }
+  button#prev {
+    margin: 0 2rem 0 0.5rem;
+  }
+  button#next {
+    margin: 0 0.5rem 0 2rem;
+  }
+  h1#title {
+    font-size: 3rem;
+  } 
+}

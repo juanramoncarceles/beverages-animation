@@ -1,0 +1,48 @@
+@mixin transition {
+  @for $i from 1 through 16 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{-4 + ($i * 1.7)}s;
+    }
+  }
+}
+
+#bubbles > circle {
+  opacity: 0;
+  animation-name: bubbles;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  @include transition;
+}
+
+@keyframes bubbles {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-60px);
+  }
+}
+
+#beer,
+#other
+{
+  animation-name: grow-shrink;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: -5s;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+@keyframes grow-shrink {
+  10% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+}
